@@ -1,0 +1,14 @@
+#@data/values-schema
+
+---
+
+deployment:
+  instances: 1
+  image: vfarcic/devops-toolkit-series:latest
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 250m
+      memory: 256Mi
