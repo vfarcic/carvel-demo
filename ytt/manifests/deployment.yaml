@@ -24,7 +24,7 @@ spec:
       - name: devops-toolkit
         image: #@ data.values.deployment.image
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         livenessProbe:
           httpGet:
             path: /

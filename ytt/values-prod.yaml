@@ -3,5 +3,4 @@
 ---
 
 deployment:
-  instances: 6
   image: vfarcic/devops-toolkit-series:2.7.0

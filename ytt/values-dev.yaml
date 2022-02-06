@@ -3,7 +3,6 @@
 ---
 
 deployment:
-  instances: 6
   image: vfarcic/devops-toolkit-series:latest
   resources:
     limits:
