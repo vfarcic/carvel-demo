@@ -10,6 +10,10 @@ spec:
       ref: origin/main
       subPath: ytt/manifests
   template:
-  - ytt: {}
+  - ytt:
+      inline:
+        pathsFrom:
+        - secretRef:
+            name: devops-toolkit-values
   deploy:
   - kapp: {}
