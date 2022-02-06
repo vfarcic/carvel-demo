@@ -9,4 +9,4 @@ stringData:
     #@data/values
     ---
     deployment:
-      image: vfarcic/devops-toolkit-series:4.1.0
+      image: vfarcic/devops-toolkit-series:2.7.0
