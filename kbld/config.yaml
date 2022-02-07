@@ -1,0 +1,10 @@
+---
+
+apiVersion: kbld.k14s.io/v1alpha1
+kind: Config
+sources:
+- image: docker.io/vfarcic/devops-toolkit
+  path: app
+destinations:
+- image: docker.io/vfarcic/devops-toolkit
+  newImage: docker.io/vfarcic/devops-toolkit
