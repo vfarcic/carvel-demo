@@ -1,0 +1,7 @@
+apiVersion: kbld.k14s.io/v1alpha1
+kind: Config
+minimumRequiredVersion: 0.32.0
+overrides:
+- image: docker.io/vfarcic/devops-toolkit
+  newImage: index.docker.io/vfarcic/devops-toolkit@sha256:aed0eb588449c2ddb237ccdc7149468668c78c4dd195123a3472130631d9cc8d
+  preresolved: true
