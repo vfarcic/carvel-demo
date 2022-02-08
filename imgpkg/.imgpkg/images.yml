@@ -1,0 +1,14 @@
+---
+apiVersion: imgpkg.carvel.dev/v1alpha1
+images:
+- annotations:
+    kbld.carvel.dev/id: docker.io/vfarcic/devops-toolkit
+    kbld.carvel.dev/origins: |
+      - local:
+          path: /Users/vfarcic/code/carvel-demo/app
+      - git:
+          dirty: true
+          remoteURL: https://github.com/vfarcic/carvel-demo
+          sha: 85a689a1d64a83699e0fcefd798bf622ec5029ba
+  image: index.docker.io/vfarcic/devops-toolkit@sha256:33aec1081e61586bdf95b9c8b733bc76e03374a7ebca8c1d7b7bcf6bf2139d5c
+kind: ImagesLock

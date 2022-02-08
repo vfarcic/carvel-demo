@@ -3,5 +3,5 @@ kind: Config
 minimumRequiredVersion: 0.32.0
 overrides:
 - image: docker.io/vfarcic/devops-toolkit
-  newImage: index.docker.io/vfarcic/devops-toolkit@sha256:aed0eb588449c2ddb237ccdc7149468668c78c4dd195123a3472130631d9cc8d
+  newImage: index.docker.io/vfarcic/devops-toolkit@sha256:33aec1081e61586bdf95b9c8b733bc76e03374a7ebca8c1d7b7bcf6bf2139d5c
   preresolved: true
