@@ -4,6 +4,7 @@
 
 deployment:
   instances: 1
+  image: vfarcic/devops-toolkit-series:latest
   resources:
     limits:
       cpu: 500m
