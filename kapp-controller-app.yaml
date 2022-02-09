@@ -10,7 +10,7 @@ spec:
   - git:
       url: https://github.com/vfarcic/carvel-demo
       ref: origin/main
-      subPath: ytt/manifests
+      subPath: kapp-controller
   template:
   - ytt: {}
   - ytt:
