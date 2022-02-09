@@ -20,3 +20,16 @@ spec:
             name: devops-toolkit-values
   deploy:
   - kapp: {}
+
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: devops-toolkit-values
+stringData:
+  values2.yml: |
+    #@data/values
+    ---
+    deployment:
+      image: vfarcic/devops-toolkit-series:2.7.0
