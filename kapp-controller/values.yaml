@@ -3,7 +3,6 @@
 ---
 
 deployment:
-  image: vfarcic/devops-toolkit-series:latest
   resources:
     limits:
       cpu: 500m
