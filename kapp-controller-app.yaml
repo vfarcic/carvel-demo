@@ -12,10 +12,6 @@ spec:
       ref: origin/main
       subPath: kapp-controller
   template:
-  - ytt:
-      inline:
-        pathsFrom:
-        - secretRef:
-            name: devops-toolkit-values
+  - ytt: {}
   deploy:
   - kapp: {}
