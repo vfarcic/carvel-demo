@@ -11,3 +11,5 @@ deployment:
     requests:
       cpu: 125m
       memory: 128Mi
+ingress:
+  host: dev.devopstoolkitseries.com

@@ -1,0 +1,82 @@
+#@ load("@ytt:data", "data")
+
+#@ name = "devops-toolkit"
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: #@ name
+  labels:
+    app: #@ name
+    component: web
+spec:
+  selector:
+    matchLabels:
+      app: #@ name
+      component: web
+  template:
+    metadata:
+      labels:
+        app: #@ name
+        component: web
+    spec:
+      containers:
+      - name: main
+        image: #@ data.values.deployment.image
+        ports:
+        - containerPort: 80
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+        resources: #@ data.values.deployment.resources
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: #@ name
+  labels:
+    app: #@ name
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+           name: #@ name
+           port:
+             number: 80
+    host: #@ data.values.ingress.host
+
+---
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: #@ name
+  labels:
+    app: #@ name
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: #@ name
+
